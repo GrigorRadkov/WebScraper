@@ -10,11 +10,11 @@ class OrbWeaver(scrapy.Spider):
     def parse(self, response):
         self.logger.info("Response from %s", response.url)
         name   = response.css("title::text").extract()
-        #price  = response.css("span::text").extract()
+        script  = response.css("script").re_first(r"\"salePrice\":[0-9]+.[0-9]+")
         #colour = response.css("micro-frontend").extract()
         #size   = response.css("title").extract()
 
         yield {"name" : name}
-        #yield {"price" : price}
+        yield {"script" : script}
         #yield {"colour" : colour}
         
