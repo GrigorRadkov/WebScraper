@@ -9,7 +9,7 @@ import scrapy
 class WebscraperItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    name  = scrapy.Field()
-    price = scrapy.Field()
-    color = scrapy.Field()
-    sizes = scrapy.Field()
+    name   = scrapy.Field()
+    price  = scrapy.Field()
+    colour = scrapy.Field()
+    sizes  = scrapy.Field()
